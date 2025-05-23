@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Погода в місті</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #b3c6ff;
+            border-radius: 8px;
+            margin: 8px 0;
+            width: 220px;
+            outline: none;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus {
+            border: 1.5px solid #66a6ff;
+        }
+        button {
+            padding: 12px 22px;
+            font-size: 16px;
+            background: linear-gradient(90deg, #ffed66 0%, #fed189 100%);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ffc766;
+        }
+        #weatherResult, #weatherResults {
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Дізнавайтесь погоду онлайн 🛜</h1>
+    
+    <h2>Прогноз погоди</h2>
+    <p>Введіть назву міста (наприклад: Kyiv) або </p>
+    <p>Введіть назви декількох міст через кому (наприклад: Kyiv,Lviv,Odesa)</p>
+    <input type="text" id="citiesInput" placeholder="Введіть міста через кому" />
+    <button onclick="getWeatherForCities()">Дізнатись погоду</button>
+    <div id="weatherResults"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
